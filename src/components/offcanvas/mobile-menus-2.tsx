@@ -16,30 +16,39 @@ export default function MobileMenusTwo() {
   return (
     <nav className="tp-main-menu-content">
       <ul>
-        {mobile_menu_data.map((menu) => (
-          <li key={menu.id} className="has-dropdown">
-            <a className="pointer">
-              {menu.title}
-              <button
-                className="dropdown-toggle-btn"
-                onClick={() => openMobileMenu(menu.title)}
+        {mobile_menu_data.map((menu) => {
+          const hasDropdown = menu.dropdown_menus && menu.dropdown_menus.length > 0;
+          if (!hasDropdown) {
+            return (
+              <li key={menu.id}>
+                <Link href={menu.link}>{menu.title}</Link>
+              </li>
+            );
+          }
+          return (
+            <li key={menu.id} className="has-dropdown">
+              <a className="pointer">
+                {menu.title}
+                <button
+                  className="dropdown-toggle-btn"
+                  onClick={() => openMobileMenu(menu.title)}
+                >
+                  <i className="fa-light fa-plus"></i>
+                </button>
+              </a>
+              <ul
+                className="tp-submenu submenu"
+                style={{ display: navTitle === menu.title ? "block" : "none" }}
               >
-                <i className="fa-light fa-plus"></i>
-              </button>
-            </a>
-            <ul
-              className="tp-submenu submenu"
-              style={{ display: navTitle === menu.title ? "block" : "none" }}
-            >
-              {menu.dropdown_menus &&
-                menu.dropdown_menus.map((dm, i) => (
+                {menu.dropdown_menus?.map((dm, i) => (
                   <li key={i}>
                     <Link href={dm.link}>{dm.title}</Link>
                   </li>
                 ))}
-            </ul>
-          </li>
-        ))}
+              </ul>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

@@ -7,10 +7,10 @@ import { footerOneAnimation, footerTwoAnimation } from "@/utils/footer-anim";
 
 const footer_links = [
   { link: "/portfolio-details-1", title: "Projects" },
-  { link: "/service", title: "What we do" },
+  { link: "/services", title: "What we do" },
   { link: "/about-us", title: "About" },
   { link: "/blog-modern", title: "Blog" },
-  { link: "/contact", title: "Contact" },
+  { link: "/get-in-touch", title: "Contact" },
 ];
 export default function FooterOne() {
   const [isActive, setIsActive] = React.useState(false);
