@@ -28,7 +28,7 @@ export default function FooterThree() {
               </div>
               <div className="col-xl-6 col-lg-6 col-md-6">
                 <div className="tp-footer-4-top-right text-start text-md-end">
-                  <Link className="tp-btn-white-lg" href="/contact">{"Let's"} Talk!</Link>
+                  <Link className="tp-btn-white-lg" href="/get-in-touch">{"Let's"} Talk!</Link>
                 </div>
               </div>
             </div>
