@@ -8,14 +8,14 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderEleven from "@/layouts/headers/header-eleven";
-import FooterTwo from "@/layouts/footers/footer-two";
+import HeaderFour from "@/layouts/headers/header-four";
+import FooterThree from "@/layouts/footers/footer-three";
 // animation
 import { charAnimation } from "@/utils/title-animation";
 import ContactForm from "@/components/form/contact-form";
 import ContactLocationTwo from "@/components/contact/contact-location-2";
 
-const ContactTwoMain = () => {
+const GetInTouchMain = () => {
   useScrollSmooth();
 
   useGSAP(() => {
@@ -28,7 +28,7 @@ const ContactTwoMain = () => {
   return (
     <Wrapper>
       {/* header area start */}
-      <HeaderEleven />
+      <HeaderFour />
       {/* header area end */}
 
       <div id="smooth-wrapper">
@@ -112,7 +112,7 @@ const ContactTwoMain = () => {
             </main>
 
             {/* footer area */}
-            <FooterTwo topCls="" />
+            <FooterThree />
             {/* footer area */}
           </div>
         </div>
@@ -121,4 +121,4 @@ const ContactTwoMain = () => {
   );
 };
 
-export default ContactTwoMain;
+export default GetInTouchMain;

@@ -3,20 +3,20 @@ import { gsap } from "gsap";
 import React from "react";
 import useScrollSmooth from "@/hooks/use-scroll-smooth";
 import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
-import { useGSAP } from "@gsap/react";
-gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, SplitText);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
-import HeaderTen from "@/layouts/headers/header-ten";
+import Wrapper from "@/layouts/wrapper";
+import HeaderSix from "@/layouts/headers/header-six";
+import FooterThree from "@/layouts/footers/footer-three";
 import PortfolioSliderHomeEleven from "@/components/portfolio/slider/portfolio-slider-home-eleven";
-import ThemeSetting from "@/components/theme-setting";
 // internal imports
 
 const HomeElevenMain = () => {
   useScrollSmooth();
   return (
-    <div>
+    <Wrapper>
       {/* header area start */}
-      <HeaderTen />
+      <HeaderSix />
       {/* header area end */}
 
       <div id="smooth-wrapper">
@@ -26,13 +26,13 @@ const HomeElevenMain = () => {
             <PortfolioSliderHomeEleven />
             {/* portfolio slider end */}
           </main>
+
+          {/* footer area */}
+          <FooterThree />
+          {/* footer area */}
         </div>
       </div>
-
-      {/* theme switcher */}
-      <ThemeSetting />
-      {/* theme switcher */}
-    </div>
+    </Wrapper>
   );
 };
 
