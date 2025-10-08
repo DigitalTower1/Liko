@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderSix from "@/layouts/headers/header-six";
+import HeaderFour from "@/layouts/headers/header-four";
 import BigText from "@/components/big-text";
 import FooterThree from "@/layouts/footers/footer-three";
 // animation
@@ -29,7 +29,7 @@ const FaqMain = () => {
   return (
     <Wrapper>
       {/* header area start */}
-      <HeaderSix />
+      <HeaderFour />
       {/* header area end */}
 
       <div id="smooth-wrapper">

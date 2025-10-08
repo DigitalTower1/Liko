@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderSix from "@/layouts/headers/header-six";
+import HeaderFour from "@/layouts/headers/header-four";
 import FooterThree from "@/layouts/footers/footer-three";
 // animation
 import { charAnimation } from "@/utils/title-animation";
@@ -28,7 +28,7 @@ const GetInTouchMain = () => {
   return (
     <Wrapper>
       {/* header area start */}
-      <HeaderSix />
+      <HeaderFour />
       {/* header area end */}
 
       <div id="smooth-wrapper">
